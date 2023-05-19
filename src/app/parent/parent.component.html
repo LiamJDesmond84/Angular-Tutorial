@@ -1,2 +1,2 @@
 <p>parent works!</p>
-<app-child [childMessage]="'Inserting childMessage into parent'"></app-child>
+<app-child [childMessage]="'Inserting childMessage into parent'" (messageEvent)="receiveMessage($event)"></app-child>
