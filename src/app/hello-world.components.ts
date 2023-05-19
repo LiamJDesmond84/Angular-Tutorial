@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
     template: '<h1>{{title}}</h1>',
     styles: [`
     h1 {
-        color: blue;
+        color: red;
     }`]
 })
 
