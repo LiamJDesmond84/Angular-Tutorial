@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,6 +8,12 @@ import { Component, Input } from '@angular/core';
 export class ChildComponent {
 
   @Input() childMessage: string;
+
+  @Output() messageEvent = new EventEmitter<string>
+
+  sendMessage(){
+    this.messageEvent.emit("YOYOYOYO from child messageEvent Output")
+  }
 
   constructor(){}
 
