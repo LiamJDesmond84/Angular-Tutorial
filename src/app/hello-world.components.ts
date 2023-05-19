@@ -3,7 +3,13 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'app-hello-world',
     template: '',
-    styles: [``]
+    styles: [`
+    h1 {
+        color: blue;
+    }`]
 })
 
-export class HelloWorldComponent {}
+export class HelloWorldComponent {
+    title = "Hello";
+
+}
