@@ -9,10 +9,10 @@ export class ChildComponent {
 
   @Input() childMessage: string;
 
-  @Output() messageEvent = new EventEmitter<string>
+  @Output() messageEventVar = new EventEmitter<string>
 
   sendMessage(){
-    this.messageEvent.emit("YOYOYOYO from child messageEvent Output")
+    this.messageEventVar.emit("YOYOYOYO from child messageEvent Output")
   }
 
   constructor(){}
