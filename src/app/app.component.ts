@@ -7,6 +7,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  title = "AYOOOO"
+
   intervalSub;
 
   ngOnInit() {
@@ -19,6 +21,15 @@ export class AppComponent implements OnInit, OnDestroy {
     if(this.intervalSub){
 
       clearInterval(this.intervalSub);
+    }
+  }
+
+  getMin(a, b){
+    if(a < b){
+      return a
+    }
+    else{
+      return b
     }
   }
 }
