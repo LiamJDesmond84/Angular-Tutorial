@@ -10,6 +10,6 @@ import { Component } from "@angular/core";
 })
 
 export class HelloWorldComponent {
-    title = "Hello";
+    title = "Hello SUCKA!";
 
 }
