@@ -19,6 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if(this.intervalSub){
+      console.log("AYYY from OnDestroy");
       clearInterval(this.intervalSub);
     }
   }
