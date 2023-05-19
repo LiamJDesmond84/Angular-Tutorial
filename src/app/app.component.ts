@@ -7,9 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  title = 'Angular-Tutorial';
-
-  intervalSub: string | number | NodeJS.Timer | undefined;
+  intervalSub;
 
   ngOnInit() {
     this.intervalSub = setInterval(() => {
@@ -19,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if(this.intervalSub){
-      console.log("AYYY from OnDestroy");
+
       clearInterval(this.intervalSub);
     }
   }
