@@ -9,6 +9,7 @@ export class ButtonComponent {
   @Input() text: string;
   @Input() color: string;
 
+  // (btnClick)="" in the parent component
   @Output() btnClick = new EventEmitter();
   
 
