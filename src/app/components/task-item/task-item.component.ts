@@ -8,6 +8,6 @@ import { Task } from 'src/app/Task';
 })
 export class TaskItemComponent {
 
-  @Input() task: Task;
+  @Input() singleTask: Task;
 
 }
