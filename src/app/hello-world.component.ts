@@ -11,7 +11,7 @@ import { Component } from "@angular/core";
 })
 
 export class HelloWorldComponent {
-    title = "Hello SUCKA!";
-    otherThing = "Something else";
+    title: string = "Hello SUCKA!";
+    otherThing: string = "Something else";
 
 }

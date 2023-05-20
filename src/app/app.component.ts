@@ -7,9 +7,21 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent {
 
-  title = "AYOOOO"
+  title: string = "AYOOOO"
 
-  intervalSub;
+
+
+  getMin(a, b){
+    if(a < b){
+      return a
+    }
+    else{
+      return b
+    }
+  }
+
+
+    // intervalSub;
 
   // ngOnInit() {
   //   this.intervalSub = setInterval(() => {
@@ -23,13 +35,4 @@ export class AppComponent {
   //     clearInterval(this.intervalSub);
   //   }
   // }
-
-  getMin(a, b){
-    if(a < b){
-      return a
-    }
-    else{
-      return b
-    }
-  }
 }
