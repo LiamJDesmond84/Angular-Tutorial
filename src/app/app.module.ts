@@ -8,6 +8,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
+import { TasksComponent } from './components/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ButtonComponent } from './components/button/button.component';
     ParentComponent,
     ChildComponent,
     HeaderComponent,
-    ButtonComponent
+    ButtonComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
