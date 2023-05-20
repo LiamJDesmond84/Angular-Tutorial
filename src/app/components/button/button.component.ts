@@ -8,8 +8,14 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() text: string;
   @Input() color: string;
+  @Input() callBack: (args: any) => void;
+  
 
-  clickMe(){
+  addMe(){
+    console.log("Add");
+  }
+
+  deleteMe(){
     console.log("Add");
   }
 }
