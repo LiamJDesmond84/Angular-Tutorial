@@ -10,11 +10,13 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TaskItemComponent {
 
   @Input() singleTask: Task;
+
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
 
   faTimes = faTimes;
 
   deleteMe(singleTask){
-    this.onDeleteTask.emit();
+    this.onDeleteTask.emit(singleTask);
   }
+  
 }
