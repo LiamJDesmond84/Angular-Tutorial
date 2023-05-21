@@ -13,12 +13,11 @@ export class HeaderComponent {
   subscription: Subscription;
 
   constructor(private uiService: UiService){
-    this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask = value));
   }
 
   toggleAddTask(): void {
     this.uiService.toggleAddTask();
-    // this.showAddTask = !this.showAddTask;
   }
 
 

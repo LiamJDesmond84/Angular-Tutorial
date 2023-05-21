@@ -17,7 +17,7 @@ export class AddTaskComponent {
 
   @Output() submitTask: EventEmitter<Task> = new EventEmitter();
 
-  onSubmit(): void {
+  onSubmit(){
 
     if(!this.text){
       return;
