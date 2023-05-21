@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskServiceService } from 'src/app/services/task-service.service';
 
 @Component({
   selector: 'app-add-task',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent {
+
+  constructor(private taskService: TaskServiceService){};
 
   text: string;
   day: string;
@@ -19,6 +22,14 @@ export class AddTaskComponent {
     if(!this.day){
       return;
     }
+
+    const newTask = {
+      text: this.text,
+      day: this.day,
+      reminder: this.reminder
+    }
+
+    this.taskService.addNewTask(newTask).subscribe();
 
 
   }

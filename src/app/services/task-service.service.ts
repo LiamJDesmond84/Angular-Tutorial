@@ -34,4 +34,9 @@ export class TaskServiceService {
     // return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task, httpOptions);
     return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task);
   }
+
+  addNewTask(task: Task): Observable<Task>{
+    // return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task, httpOptions);
+    return this.httpReq.post<Task>(this.apiUrl, task);
+  }
 }
