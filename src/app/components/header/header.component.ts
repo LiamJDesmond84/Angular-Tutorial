@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,20 +9,22 @@ import { UiService } from 'src/app/services/ui.service';
 })
 export class HeaderComponent {
   title: string = "Task Tracker";
+  showAddTask: boolean;
+  subscription: Subscription;
 
   constructor(private uiService: UiService){}
 
-  toggleAddTask(){
+  toggleAddTask(): void {
     this.uiService.toggleAddTask();
   }
 
 
   
-  addMe(){
+  addMe(): void {
     console.log("Added")
   }
 
-  deleteMe(){
+  deleteMe(): void {
     console.log("Deleted")
   }
 }

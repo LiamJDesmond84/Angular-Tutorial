@@ -17,11 +17,11 @@ export class TaskItemComponent {
 
   faTimes = faTimes;
 
-  deleteMe(singleTask){
+  deleteMe(singleTask): void {
     this.onDeleteTask.emit(singleTask);
   }
 
-  onToggle(singleTask){
+  onToggle(singleTask): void {
     this.onToggleReminder.emit(singleTask);
   }
   
