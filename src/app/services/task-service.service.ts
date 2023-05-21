@@ -4,6 +4,12 @@ import { Observable } from 'rxjs';
 import { Task } from '../Task';
 import { TASKS } from '../mock-tasks';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    "Content-Type": "application/json"
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +31,7 @@ export class TaskServiceService {
   }
 
   updateTaskReminder(task: Task): Observable<Task>{
+    // return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task, httpOptions);
     return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task);
   }
 }
