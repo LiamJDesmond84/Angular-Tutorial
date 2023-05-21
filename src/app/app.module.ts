@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './pages/about/about.component';
 
 const appRoutes: Routes = [
   {path: "", component: TasksComponent},
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     TasksComponent,
     TaskItemComponent,
     AddTaskComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
