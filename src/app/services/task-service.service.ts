@@ -27,16 +27,16 @@ export class TaskServiceService {
   deleteTasks(task: Task): Observable<Task> {
     // const singleTaskUrl = `${this.apiUrl}/${task.id}`
 
-    return this.httpReq.delete<Task>(this.apiUrl + "/" + task.id);
+    return this.httpReq.delete<Task>(`${this.apiUrl}/${task.id}`);
   }
 
   updateTaskReminder(task: Task): Observable<Task>{
-    // return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task, httpOptions);
-    return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task);
+
+    return this.httpReq.put<Task>(`${this.apiUrl}/${task.id}`, task, httpOptions);
   }
 
   addNewTask(task: Task): Observable<Task>{
-    // return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task, httpOptions);
-    return this.httpReq.post<Task>(this.apiUrl, task);
+
+    return this.httpReq.post<Task>(this.apiUrl, task, httpOptions);
   }
 }
