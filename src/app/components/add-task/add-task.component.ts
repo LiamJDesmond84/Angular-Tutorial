@@ -32,6 +32,7 @@ export class AddTaskComponent {
       reminder: this.reminder
     }
 
+    // Moved to main task-component, newTask = $event argument
     // this.taskService.addNewTask(newTask).subscribe();
 
     this.submitTask.emit(newTask);
