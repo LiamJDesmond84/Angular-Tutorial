@@ -13,10 +13,16 @@ export class TaskItemComponent {
 
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
 
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
+
   faTimes = faTimes;
 
   deleteMe(singleTask){
     this.onDeleteTask.emit(singleTask);
+  }
+
+  onToggle(singleTask){
+    this.onToggleReminder.emit(singleTask);
   }
   
 }
