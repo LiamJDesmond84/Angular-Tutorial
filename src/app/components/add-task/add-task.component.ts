@@ -11,4 +11,16 @@ export class AddTaskComponent {
   day: string;
   reminder: boolean = false;
 
+  onSubmit(){
+
+    if(!this.text){
+      return;
+    }
+    if(!this.day){
+      return;
+    }
+
+
+  }
+
 }
