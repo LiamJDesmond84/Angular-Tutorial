@@ -1,4 +1,4 @@
-<div class="task">
+<div [ngClass]="{ reminder: singleTask.reminder }" class="task">
     <h3>{{ singleTask.text }} <fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTimes" (click)="deleteMe(singleTask)"></fa-icon></h3>
     <p>{{singleTask.day}}</p>
 </div>
