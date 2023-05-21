@@ -23,4 +23,8 @@ export class TaskServiceService {
 
     return this.httpReq.delete<Task>(this.apiUrl + "/" + task.id);
   }
+
+  updateTaskReminder(task: Task): Observable<Task>{
+    return this.httpReq.put<Task>(this.apiUrl + "/" + task.id, task);
+  }
 }
